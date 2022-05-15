@@ -1,3 +1,5 @@
+import Location from "./images/restaurant-location.png";
+
 function createContact() {
   const contact = document.createElement("div");
   contact.classList.add("contact");
@@ -9,7 +11,7 @@ function createContact() {
   address.textContent = "🏠 Hollywood Boulevard 42, Los Angeles, USA";
 
   const restaurantLocation = document.createElement("img");
-  restaurantLocation.src = "images/restaurant-location.png";
+  restaurantLocation.src = Location;
   restaurantLocation.alt = "Mozzafiato restaurant location";
 
   contact.appendChild(phoneNumber);
@@ -24,5 +26,7 @@ function loadContact() {
   main.textContent = "";
   main.appendChild(createContact());
 }
+
+console.log("contact");
 
 export default loadContact;

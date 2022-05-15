@@ -1,9 +1,11 @@
+import Chef from "./images/chef.png";
+
 function createHome() {
   const home = document.createElement("div");
   home.classList.add("home");
 
   const chefImage = document.createElement("img");
-  chefImage.src = "images/chef.png";
+  chefImage.src = Chef;
   chefImage.alt = "Chef";
 
   home.appendChild(createParagraph("Best pizza in your country"));
