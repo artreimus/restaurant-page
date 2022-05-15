@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
+      title: "Restaurant Page",
     }),
   ],
   output: {
@@ -31,7 +31,7 @@ module.exports = {
       },
     ],
   },
-  //   optimization: {
-  //     runtimeChunk: "single",
-  //   },
+  // optimization: {
+  //   runtimeChunk: "single",
+  // },
 };
