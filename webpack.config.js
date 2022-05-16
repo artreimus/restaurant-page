@@ -13,7 +13,7 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    // clean: true,
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -32,7 +32,4 @@ module.exports = {
       },
     ],
   },
-  // optimization: {
-  //   runtimeChunk: "single",
-  // },
 };

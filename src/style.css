@@ -40,22 +40,6 @@ header .logo {
   height: fit-content;
 }
 
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-}
-
-a {
-  text-decoration: none;
-  color: var(--font-color);
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
 /* Content */
 
 .content {
@@ -77,12 +61,6 @@ img {
   padding: 0.8rem;
   background-color: var(--background-light);
   border-bottom: 1px solid var(--border-color);
-}
-
-.restaurant-name {
-  margin-bottom: 1rem;
-  font-family: "Tangerine", cursive;
-  font-size: 10rem;
 }
 
 .button-nav {
@@ -156,13 +134,6 @@ img {
   font-size: 2.5rem;
 }
 
-.home img {
-  width: 50%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  opacity: 90%;
-}
-
 /* Menu page */
 
 .menu {
@@ -202,20 +173,11 @@ img {
   width: 60%;
 }
 
-.menu-item h2 {
-  padding: 2rem;
-}
-
-.menu-item p {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
 /* Contact page */
 
 .contact {
-  height: 525px;
-  width: 618px;
+  height: 100%;
+  width: 100%;
   animation: fadeIn 1.5s;
 }
 
@@ -272,14 +234,6 @@ img {
   background-color: var(--background-light);
 }
 
-.fa-github {
-  font-size: 2rem;
-}
-
-.fa-github:hover {
-  color: var(--font-color-dark);
-}
-
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -311,6 +265,8 @@ img {
 }
 
 /* Media queries */
+
+/* To be fixed in the future */
 
 @media (max-width: 700px) {
   .home,

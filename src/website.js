@@ -12,7 +12,6 @@ function createHeader() {
   logoImage.alt = "Logo";
   logoImage.classList.add("logo");
 
-  // header.appendChild(restaurantName);
   header.appendChild(logoImage);
   header.appendChild(createNav());
 
@@ -82,16 +81,7 @@ function createFooter() {
   const copyright = document.createElement("p");
   copyright.textContent = `Copyright © ${new Date().getFullYear()} artreimus`;
 
-  const githubLink = document.createElement("a");
-  githubLink.href = "https://github.com/michalosman";
-
-  const githubIcon = document.createElement("i");
-  githubIcon.classList.add("fab");
-  githubIcon.classList.add("fa-github");
-
-  githubLink.appendChild(githubIcon);
   footer.appendChild(copyright);
-  footer.appendChild(githubLink);
 
   return footer;
 }

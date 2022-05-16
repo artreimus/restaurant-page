@@ -9,11 +9,11 @@ function createMenu() {
   const menu = document.createElement("div");
   menu.classList.add("menu");
 
-  menu.appendChild(createMenuItem("Bundles", Bundle));
-  menu.appendChild(createMenuItem("Chicken", Chicken));
-  menu.appendChild(createMenuItem("Spaghetti", Spaghetti));
-  menu.appendChild(createMenuItem("Steaks", Steak));
-  menu.appendChild(createMenuItem("Desserts", Dessert));
+  menu.appendChild(createMenuItem("Family Meals", Bundle));
+  menu.appendChild(createMenuItem("Chickens", Chicken));
+  menu.appendChild(createMenuItem("Jolly Spaghetti", Spaghetti));
+  menu.appendChild(createMenuItem("Burger Steaks", Steak));
+  menu.appendChild(createMenuItem("Desserts and Drinks", Dessert));
   menu.appendChild(createMenuItem("Burgers", Burger));
   return menu;
 }
