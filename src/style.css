@@ -1,9 +1,11 @@
 :root {
-  --font-color: #eee;
+  --font-color: #black;
+  --font-cta: #d6001d;
   --font-color-dark: #aaa;
+  --font-style: Arial, Helvetica, sans-serif;
   --border-color: #222;
-  --background-light: rgba(0, 0, 0, 0.6);
-  --background-light-hover: rgba(99, 99, 99, 0.4);
+  --background-light: rgba(255, 255, 255, 1);
+  --background-light-hover: rgba(99, 99, 99, 0.2);
   --background-dark: rgba(0, 0, 0, 0.9);
 }
 
@@ -21,7 +23,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", cursive;
+  font-family: var(--font-style);
   font-size: 1.6rem;
   color: var(--font-color);
   background-image: url("images/background.jpg");
@@ -31,6 +33,11 @@ body {
 
 header {
   font-size: 2.4rem;
+}
+
+header .logo {
+  width: fit-content;
+  height: fit-content;
 }
 
 h1,
@@ -49,14 +56,6 @@ img {
   width: 100%;
 }
 
-button {
-  font-family: inherit;
-  color: inherit;
-  cursor: pointer;
-  border-style: none;
-  outline: none;
-}
-
 /* Content */
 
 .content {
@@ -71,12 +70,12 @@ button {
 
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
-  padding: 2rem;
-  background-color: var(--background-dark);
+  padding: 0.8rem;
+  background-color: var(--background-light);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -87,15 +86,21 @@ button {
 }
 
 .button-nav {
-  padding: 2rem;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  padding: 1.5rem;
   font-size: 2rem;
+  font-weight: 600;
   background-color: transparent;
-  border-bottom: 2px solid transparent;
+  border-bottom: 4px solid transparent;
   transition: transform 0.3s;
 }
 
 .button-nav.active {
-  border-bottom: 2px solid var(--font-color);
+  border-bottom: 4px solid red;
 }
 
 .button-nav:hover {
@@ -104,7 +109,25 @@ button {
 
 /* Main */
 
-.main {
+.main-home {
+  width: 60vw;
+  padding: 2rem 5rem;
+  margin: 6rem 0;
+  font-size: 2rem;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+}
+
+.main-menu {
+  width: 80vw;
+  padding: 4rem;
+  margin: 6rem 0;
+  font-size: 2rem;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+}
+
+.main-contact {
   max-width: 700px;
   padding: 4rem;
   margin: 6rem 0;
@@ -118,15 +141,19 @@ button {
 .home {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 525px;
-  width: 618px;
+  height: 50vh;
   animation: fadeIn 1.5s;
 }
 
+.home h1 {
+  font-size: 5.2rem;
+  color: var(--font-cta);
+}
+
 .home p {
-  padding: 1rem;
+  padding-top: 1rem;
+  font-size: 2.5rem;
 }
 
 .home img {
@@ -140,9 +167,17 @@ button {
 
 .menu {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem;
   animation: fadeIn 1.5s;
+}
+
+.menu-header {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--font-cta);
 }
 
 .menu-item {
@@ -159,6 +194,8 @@ button {
 
 .menu-item:hover {
   background-color: var(--background-light-hover);
+  border: 2px solid black;
+  border-radius: 15px;
 }
 
 .menu-item img {
@@ -177,10 +214,6 @@ button {
 /* Contact page */
 
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 525px;
   width: 618px;
   animation: fadeIn 1.5s;
@@ -188,13 +221,42 @@ button {
 
 .contact p {
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0rem;
 }
 
-.contact img {
-  max-height: 420px;
-  padding: 1rem;
-  opacity: 90%;
+.contact .image-container {
+  display: flex;
+  flex-flow: row;
+  padding-top: 2rem;
+}
+
+.contact .delivery-image {
+  max-width: 50%;
+  max-height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.button-deliver {
+  background-color: #ffb11f; /* Green */
+  border: 2px solid #ffb11f;
+  border-radius: 8px;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 30%;
+}
+
+.button-deliver:hover {
+  background-color: #f19d00;
+  border: 2px solid #f19d00;
 }
 
 /* Footer */

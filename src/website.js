@@ -1,16 +1,19 @@
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
 import loadContact from "./contact.js";
+import Logo from "./images/logo.png";
 
 function createHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
 
-  const restaurantName = document.createElement("h1");
-  restaurantName.classList.add("restaurant-name");
-  restaurantName.textContent = "Mozzafiato";
+  const logoImage = document.createElement("img");
+  logoImage.src = Logo;
+  logoImage.alt = "Logo";
+  logoImage.classList.add("logo");
 
-  header.appendChild(restaurantName);
+  // header.appendChild(restaurantName);
+  header.appendChild(logoImage);
   header.appendChild(createNav());
 
   return header;
@@ -77,7 +80,7 @@ function createFooter() {
   footer.classList.add("footer");
 
   const copyright = document.createElement("p");
-  copyright.textContent = `Copyright © ${new Date().getFullYear()} michalosman`;
+  copyright.textContent = `Copyright © ${new Date().getFullYear()} artreimus`;
 
   const githubLink = document.createElement("a");
   githubLink.href = "https://github.com/michalosman";

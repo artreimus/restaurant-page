@@ -1,32 +1,53 @@
-import Location from "./images/restaurant-location.png";
+import Deliver from "./images/deliver.png";
+import Checkout from "./images/checkout.png";
 
 function createContact() {
   const contact = document.createElement("div");
   contact.classList.add("contact");
 
-  const phoneNumber = document.createElement("p");
-  phoneNumber.textContent = "📞 123 456 789";
+  const contactHeader = document.createElement("h1");
+  contactHeader.textContent = "Delivery";
 
-  const address = document.createElement("p");
-  address.textContent = "🏠 Hollywood Boulevard 42, Los Angeles, USA";
+  const deliveryDetails = document.createElement("p");
+  deliveryDetails.textContent =
+    "Ordering from Jollibee has never been easier! Call #87000, Click Order Online to go to JollibeeDelivery.com or tap the Jollibee app. Satisfy your cravings and have your Jollibee favorites delivered right to your doorstep!";
 
-  const restaurantLocation = document.createElement("img");
-  restaurantLocation.src = Location;
-  restaurantLocation.alt = "Mozzafiato restaurant location";
+  const deliverBtn = document.createElement("button");
+  deliverBtn.classList.add("button-deliver");
+  deliverBtn.textContent = "Order now";
 
-  contact.appendChild(phoneNumber);
-  contact.appendChild(address);
-  contact.appendChild(restaurantLocation);
+  deliverBtn.addEventListener("click", () => {
+    window.open("https://www.jollibeedelivery.com/home", "_blank");
+  });
+
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("image-container");
+
+  const deliveryImage = document.createElement("img");
+  deliveryImage.src = Deliver;
+  deliveryImage.alt = "Jollibee App";
+  deliveryImage.classList.add("delivery-image");
+
+  const checkoutImage = document.createElement("img");
+  checkoutImage.src = Checkout;
+  checkoutImage.alt = "Jollibee App";
+  checkoutImage.classList.add("delivery-image");
+
+  contact.appendChild(contactHeader);
+  contact.appendChild(deliveryDetails);
+  contact.appendChild(deliverBtn);
+  contact.appendChild(imageContainer);
+  imageContainer.appendChild(deliveryImage);
+  imageContainer.appendChild(checkoutImage);
 
   return contact;
 }
 
-function loadContact() {
+export default function loadContact() {
   const main = document.getElementById("main");
+  main.classList.add("main-contact");
+  main.classList.remove("main-menu", "main-home");
   main.textContent = "";
   main.appendChild(createContact());
+  console.log("contact");
 }
-
-console.log("contact");
-
-export default loadContact;
